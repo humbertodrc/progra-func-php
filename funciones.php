@@ -1,9 +1,11 @@
 <?php
 //Calculadora 2 numeros
 $valor1 = 6;
-$valor2 = 2;
+$valor2 = 30;
+//Ingrese sumar, restar, multiplicar o dividir
+$operacion = "restar";
 
-function suma($val1, $val2)
+function sumar($val1, $val2)
 {
     return $val1 + $val2;
 
@@ -26,11 +28,10 @@ function dividir($val1, $val2)
 
 }
 
-$operacion = "restar";
 
 switch ($operacion) {
-    case "suma":
-        $resultado = suma($valor1, $valor2);
+    case "sumar":
+        $resultado = sumar($valor1, $valor2);
         break;
     case "restar":
         $resultado = resta($valor1, $valor2);
@@ -38,7 +39,7 @@ switch ($operacion) {
     case "multiplicar":
         $resultado = multiplicar($valor1, $valor2);
         break;
-        case "dividir":
+    case "dividir":
         $resultado = dividir($valor1, $valor2);
         break;
     default:
@@ -46,7 +47,11 @@ switch ($operacion) {
         break;
 }
 
-echo $resultado;
+echo "Calculadora de 2 numeros";
+echo "<br>";
+echo "El tipo de operacion es $operacion";
+echo "<br>";
+echo "El resultado es $resultado";
 
 
 
